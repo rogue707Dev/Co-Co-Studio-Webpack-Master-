@@ -822,6 +822,10 @@ section {
       .blog-article {
 
         display: flex;
+        
+        @media (max-width: $smalldeskBreakpoint) {
+          display: block;
+        }
 
         .article-blank{
           width : 50%;
@@ -831,6 +835,10 @@ section {
         .post-article {
           width:50%;
           padding: 15px 48px;
+ 
+          @media (max-width: $smalldeskBreakpoint) {
+            width: 100%;
+          }
 
           &.left {
             order: -1
@@ -842,6 +850,10 @@ section {
 
           .post-title {
             @include fontDef(white, 'Raleway', 20px, $semiBold, 2px);
+
+            @media (max-width: $smalldeskBreakpoint) {
+              line-height: 22px;
+            }
           }
 
           .post-desc {
