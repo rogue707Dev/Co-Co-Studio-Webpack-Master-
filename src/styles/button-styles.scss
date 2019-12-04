@@ -1,0 +1,47 @@
+.btn {
+  background-color: $golden;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  @include fontDef(white, 'Raleway', 14px, 700, 36px);
+  padding: 0px 10px;
+}
+
+.btn-blue {
+  background-color: #49a0ae;
+}
+
+.btn-white {
+  background-color: white;
+  @include fontDef(#2c3e50, 'Open Sans', 12px , 800 , 22px);
+  padding: 9px 10px 7px 10px;
+  margin: 0 5px;
+  @media (max-width: 768px) {
+  }
+}
+
+.btn-green {
+  background-color: #22c48a;
+}
+
+.active {
+  background-color: $gold;
+  color: white;
+}
+
+.btn-more {
+  background-color: $gold;
+  color: white;
+  font-size: 14px;
+  padding: 10px 50px;
+}
+.btn-rounded {
+  border-radius: 50px;
+  padding: 5px 32px;
+  margin-bottom: 110px;
+}
+
+.btn-semi-rounded {
+  border-radius: 5px;
+  padding: 5px 32px;
+}
