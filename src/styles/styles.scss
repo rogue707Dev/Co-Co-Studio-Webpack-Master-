@@ -747,7 +747,7 @@ section {
       
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
+      align-items: flex-end;
       margin-bottom: 50px;
 
       @media (max-width: $smalldeskBreakpoint) {
@@ -759,21 +759,31 @@ section {
       }
 
       .price-ticket {
+        flex: 3;
 
         &:hover{
           cursor: pointer;
 
           .ticket-header {
-            padding: 60px 60px;
+            padding: 62px 40px 60px;
           }
+
         }
 
+        &.selected {
+          flex: 4;
+
+          .ticket-header {
+            padding: 62px 40px 60px;
+          }
+
+        }
         
         margin: 10px 10px;
 
         .ticket-header {
 
-          padding: 40px;
+          padding: 30px;
 
           h4 {
             margin:10px;
