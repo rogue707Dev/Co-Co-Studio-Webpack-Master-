@@ -849,7 +849,7 @@ section {
           }
 
           .post-title {
-            @include fontDef(white, 'Raleway', 20px, $semiBold, 2px, none, uppercase);
+            @include fontDef(white, 'Raleway', 20px, $semiBold, 20px, none, uppercase);
 
             @media (max-width: $smalldeskBreakpoint) {
               line-height: 22px;
@@ -948,6 +948,66 @@ section {
         }
 
       }
+    }
+
+    .testimonials {
+      display: block;
+      padding-bottom: 50px;
+
+      .testimonial-title {
+        text-align: center;
+
+        p {
+          @include fontDef(#bcc3ca, 'Arial', 200px, bolder, 0px);
+          text-shadow: 3px 3px #182430;
+          margin: 60px 0px 35px 0;
+          
+          @media (max-width: $smalldeskBreakpoint) {
+            margin-top: 125px;
+          }
+        }
+
+      }
+
+      .testimonial-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $smalldeskBreakpoint) {
+          flex-direction: column;
+        }
+
+        .testimonial-icon {
+          width: 80px;
+          height: 80px;
+          background-color: #4e6e8e;
+          border-radius: 40px;
+          margin: 0px 5px;
+
+          &.active {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: #e3e2e2;
+          }
+        }
+      }
+
+      .testimonial-article {
+        margin: 0px 50px;
+
+        p {
+          @include fontDef(#bcc3ca, 'Open Sans', 16px, 400, 30px);
+          text-align: center;
+        }
+
+        h5 {
+          @include fontDef(#f1f2f3, 'Raleway', 14px, 700, 24px);
+          text-align: center;
+        }
+      }
+
     }
 
   }
