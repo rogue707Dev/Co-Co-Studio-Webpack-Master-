@@ -237,6 +237,9 @@ section {
           padding: 55px 0 0 0;
           @include fontDef(white, 'Raleway', 18px, 100, 14px, none, uppercase);
           
+          @media (max-width: $mobileBreakpoint) {
+            padding-top: 105px;
+          }
           .bold {
             font-weight: 800;
           }
@@ -747,7 +750,7 @@ section {
       
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
+      align-items: flex-end;
       margin-bottom: 50px;
 
       @media (max-width: $smalldeskBreakpoint) {
@@ -759,21 +762,31 @@ section {
       }
 
       .price-ticket {
+        flex: 3;
 
         &:hover{
           cursor: pointer;
 
           .ticket-header {
-            padding: 60px 60px;
+            padding: 62px 40px 60px;
           }
+
         }
 
+        &.selected {
+          flex: 4;
+
+          .ticket-header {
+            padding: 62px 40px 60px;
+          }
+
+        }
         
         margin: 10px 10px;
 
         .ticket-header {
 
-          padding: 40px;
+          padding: 30px;
 
           h4 {
             margin:10px;
@@ -813,6 +826,204 @@ section {
 
         }
 
+      }
+
+    }
+    
+    .blog-posts {
+
+      .blog-article {
+
+        display: flex;
+        
+        @media (max-width: $smalldeskBreakpoint) {
+          display: block;
+        }
+
+        .article-blank{
+          width : 50%;
+          background-color: white;
+        }
+
+        .post-article {
+          width:50%;
+          padding: 15px 48px;
+ 
+          @media (max-width: $smalldeskBreakpoint) {
+            width: 100%;
+          }
+
+          &.left {
+            order: -1
+          }
+
+          .post-date {
+            @include fontDef(#333333, 'Raleway', 12px, $regular, 2px);
+          }
+
+          .post-title {
+            @include fontDef(white, 'Raleway', 20px, $semiBold, 20px, none, uppercase);
+
+            @media (max-width: $smalldeskBreakpoint) {
+              line-height: 22px;
+            }
+          }
+
+          .post-desc {
+            @include fontDef(white, 'Raleway', 13px, $regular, 22px);
+          }
+
+          .post-detail {
+            @include fontDef(white, 'Raleway', 13px, $regular, 24px);
+
+            span {
+              &.badge {
+                background-color: white;
+                color: #27ae60;
+                padding:2px;
+                border-radius: 3px;
+              }
+              margin-right: 15px;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    .subscribe-form {
+      padding: 30px 5px 80px 5px;
+      display: flex;
+      
+      @media (max-width: $smalldeskBreakpoint) { 
+        padding: 30px 5px 29px 5px;
+      }
+
+      @media (max-width: $tabletBreakpoint) {
+        display: grid;
+      }
+
+      .subscribe-input {
+        width: 50%;
+
+        @media (max-width: $tabletBreakpoint) {
+          width: 100%
+        }
+        
+        input {
+          width: 100%;
+          height: 100px;
+          border: #16a085 5px solid;
+          background-color: #333333;
+          text-align: center;
+          @include fontDef(#16a085, 'Open Sans', 14px, $bold, 20px, none, uppercase);
+        }
+      }
+
+      .post-button {
+        width: 50%;
+
+        @media (max-width: $tabletBreakpoint) {
+          width: 100%
+        }
+
+        button {
+          width: 100%;
+          height: 100px;
+          background-color: #16a085;
+          outline: none;
+          border: none;
+          @include fontDef(white, 'Open Sans', 14px, $bold, 20px, none, uppercase);
+        }
+
+      }
+    }
+
+    .client-logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0 64px 0;
+
+      @media (max-width: $smalldeskBreakpoint) {
+        flex-direction: column;
+        margin: auto;
+        padding: 10px 0px;
+      }
+
+      img {
+        opacity: 0.5;
+
+        @media (max-width: $smalldeskBreakpoint) {
+          padding:10px 0px;
+        }
+
+      }
+    }
+
+    .testimonials {
+      display: block;
+      padding-bottom: 50px;
+
+      .testimonial-title {
+        text-align: center;
+
+        p {
+          @include fontDef(#bcc3ca, 'Arial', 200px, bolder, 0px);
+          text-shadow: 3px 3px #182430;
+          margin: 60px 0px 35px 0;
+          
+          @media (max-width: $smalldeskBreakpoint) {
+            margin-top: 125px;
+          }
+        }
+
+      }
+
+      .testimonial-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $smalldeskBreakpoint) {
+          flex-direction: column;
+        }
+
+        .testimonial-icon {
+          width: 80px;
+          height: 80px;
+          background-color: #4e6e8e;
+          border-radius: 40px;
+          margin: 0px 5px;
+
+          &.active {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: #e3e2e2;
+          }
+          &:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+          }
+        }
+      }
+
+      .testimonial-article {
+        margin: 0px 50px;
+
+        p {
+          @include fontDef(#bcc3ca, 'Open Sans', 16px, 400, 30px);
+          text-align: center;
+        }
+
+        h5 {
+          @include fontDef(#f1f2f3, 'Raleway', 14px, 700, 24px);
+          text-align: center;
+        }
       }
 
     }
