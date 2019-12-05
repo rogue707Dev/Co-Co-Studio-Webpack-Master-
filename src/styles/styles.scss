@@ -883,9 +883,21 @@ section {
     .subscribe-form {
       padding: 30px 5px 80px 5px;
       display: flex;
+      
+      @media (max-width: $smalldeskBreakpoint) { 
+        padding: 30px 5px 29px 5px;
+      }
+
+      @media (max-width: $tabletBreakpoint) {
+        display: grid;
+      }
 
       .subscribe-input {
         width: 50%;
+
+        @media (max-width: $tabletBreakpoint) {
+          width: 100%
+        }
         
         input {
           width: 100%;
@@ -900,6 +912,10 @@ section {
       .post-button {
         width: 50%;
 
+        @media (max-width: $tabletBreakpoint) {
+          width: 100%
+        }
+
         button {
           width: 100%;
           height: 100px;
@@ -907,6 +923,28 @@ section {
           outline: none;
           border: none;
           @include fontDef(white, 'Open Sans', 14px, $bold, 20px, none, uppercase);
+        }
+
+      }
+    }
+
+    .client-logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0 64px 0;
+
+      @media (max-width: $smalldeskBreakpoint) {
+        flex-direction: column;
+        margin: auto;
+        padding: 10px 0px;
+      }
+
+      img {
+        opacity: 0.5;
+
+        @media (max-width: $smalldeskBreakpoint) {
+          padding:10px 0px;
         }
 
       }
