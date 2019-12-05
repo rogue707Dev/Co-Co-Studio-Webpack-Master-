@@ -237,6 +237,9 @@ section {
           padding: 55px 0 0 0;
           @include fontDef(white, 'Raleway', 18px, 100, 14px, none, uppercase);
           
+          @media (max-width: $mobileBreakpoint) {
+            padding-top: 105px;
+          }
           .bold {
             font-weight: 800;
           }
