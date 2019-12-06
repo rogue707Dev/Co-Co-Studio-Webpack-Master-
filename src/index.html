@@ -944,7 +944,7 @@
       </div>
     </section>
     <section class="section section-subscribe bg-dark">
-      <div class="containter">
+      <div class="container">
         <div class="content">
           <div class="subscribe-form">
             <div class="subscribe-input">
@@ -959,16 +959,16 @@
     </section>
 
     <section class="section section-client-logos bg-black">
-      <div class="containter">
+      <div class="container">
         <div class="content">
           <div class="client-logos">
-            <img src="../public/images/client-logo-mashable.png" alt="Mashable"/>
-            <img src="../public/images/client-logo-dribbble.png" alt="Dribble"/>
-            <img src="../public/images/client-logo-joomla.png" alt="Joomla"/>
-            <img src="../public/images/client-logo-mysql.png" alt="MySQL" />
-            <img src="../public/images/client-logo-pinterest.png" alt="Pinterest"/>
-            <img src="../public/images/client-logo-wordpress.png" alt="WordPress"/>
-            <img src="../public/images/client-logo-envato.png" alt="Envato"/>
+            <img src="public/images/client-logo-mashable.png" alt="Mashable"/>
+            <img src="public/images/client-logo-dribbble.png" alt="Dribble"/>
+            <img src="public/images/client-logo-joomla.png" alt="Joomla"/>
+            <img src="public/images/client-logo-mysql.png" alt="MySQL" />
+            <img src="public/images/client-logo-pinterest.png" alt="Pinterest"/>
+            <img src="public/images/client-logo-wordpress.png" alt="WordPress"/>
+            <img src="public/images/client-logo-envato.png" alt="Envato"/>
           </div>
         </div>
       </div>
@@ -1000,5 +1000,98 @@
       </div>
     </section>
 
+    <div id="googleMap" style="width:100%;height:800px;"></div>
+
+    <section class="section section-get-in-touch bg-dark">
+      <div class="container">
+        <h2 class="title">Get in <span class="color-red">touch</span></h2>
+        <p class="title-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.
+        </p>
+        <div class="content">
+          <div class="get-in-touch-body">
+            <div class="get-in-touch-form">
+              <div class="form-email">
+                <input type="text" placeholder="Full Name" />
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="form-others">
+                <input type="text" placeholder="Website" />
+                <input type="text" placeholder="7 + 8" />
+              </div>
+              <div class="form-textarea">
+                <textarea placeholder="" rows="10"></textarea>
+              </div>
+              <div class="form-button">
+                <button class="btn btn-not-rounded bg-red uppercase">send now</button>
+              </div>
+            </div>
+            <div class="contact-details">
+              <div class="contact-info">
+                <img src="./public/images/getintouch-mail.png" />
+                <p class="info-title">INFO</p>
+                <p class="info-detail">info@cocostudio.com</p>
+              </div>
+              <div class="contact-info">
+                <img src="./public/images/getintouch-mail.png" />
+                <p class="info-title">INFO</p>
+                <p class="info-detail">info@cocostudio.com</p>
+              </div>
+              <div class="contact-info">
+                <img src="./public/images/getintouch-location.png" />
+                <p class="info-title">INFO</p>
+                <p class="info-detail">info@cocostudio.com</p>
+              </div>
+              <div class="contact-info">
+                <img src="./public/images/getintouch-phone.png" />
+                <p class="info-title">PHONE</p>
+                <p class="info-detail">+62 - 0343 - 1234567</p>
+              </div>
+              <div class="contact-info">
+                <img src="./public/images/getintouch-location.png" />
+                <p class="info-title">INFO</p>
+                <p class="info-detail">info@cocostudio.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section section-social-icons bg-red">
+      <div class="container">
+        <div class="content">
+          <div class="social-icons">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-dribbble"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="copyright"><span class="color-white">© 2014</span> COCOSTUDIO<span class="color-white">. ALL RIGHT RESERVED. DESIGNED BY</span> MYBOODESIGN.COM</p>
+    </footer>
+
+    <script>
+      function myMap() {
+        var mapProp = {
+          center: new google.maps.LatLng(-7.641863, 112.906681),
+          zoom: 17,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        marker = new google.maps.Marker({
+          position: mapProp.center,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
   </body>
 </html>

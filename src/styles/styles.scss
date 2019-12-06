@@ -838,6 +838,7 @@ section {
         
         @media (max-width: $smalldeskBreakpoint) {
           display: block;
+          padding: 0px 30px;
         }
 
         .article-blank{
@@ -1028,12 +1029,147 @@ section {
 
     }
 
+    .get-in-touch-body {
+      padding-bottom: 50px;
+
+      .get-in-touch-form {
+        padding: 35px 75px;
+
+        .form-email {
+          display: flex;
+          justify-content: space-between;
+
+          @media (max-width: $tabletBreakpoint) {
+            display: grid;
+            justify-content: initial;
+          }
+
+          input {
+            @include fontDef(white, 'Raleway', 13px, 400, 24px);
+            border: 3px white solid;
+            background-color: transparent;
+            padding: 5px 10px;
+            width:48%;
+
+            @media (max-width: $tabletBreakpoint) {
+              width: 100%;
+              margin-top:10px;
+            }
+          }
+
+        }
+        
+        .form-others {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 15px;
+
+          @media (max-width: $tabletBreakpoint) {
+            display: grid;
+            justify-content: initial;
+          }
+
+          input {
+            @include fontDef(white, 'Raleway', 13px, 400, 24px);
+            border: 3px white solid;
+            background-color: transparent;
+            padding: 5px 10px;
+            width:48%;
+            
+            @media (max-width: $tabletBreakpoint) {
+              width: 100%;
+              margin-top:10px;
+            }
+          }
+
+        }
+
+        .form-textarea {
+          margin-top: 15px;
+
+          textarea {
+            @include fontDef(white, 'Raleway', 13px, 400, 24px);
+            border: 3px white solid;
+            background-color: transparent;
+            padding: 5px 10px;
+            width: 100%;
+          }
+        }
+
+        .form-button {
+
+          display: grid;
+
+        }
+
+      }
+
+      .contact-details {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media (max-width: $tabletBreakpoint) {
+          display: block;
+        }
+
+        .contact-info {
+
+          text-align: center;
+
+          .info-title {
+            @include fontDef(#879cb0, 'Raleway', 12px, 600, 24px);
+            margin: 0px;
+          }
+
+          .info-detail {
+            @include fontDef(#879cb0, 'Open Sans', 13px, 400, 22px);
+            margin: 0px;
+          }
+
+        }
+      }
+
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      font-size: 40px;
+      color: white;
+      padding-bottom: 64px;
+
+      @media (max-width: $smalldeskBreakpoint) {
+        padding: 50px 0px;
+      }
+
+      @media (max-width: $tabletBreakpoint) {
+        display: block;
+      }
+
+      i {
+        padding: 0px 30px;
+      }
+    }
+
   }
   
   .more-people {
     display: flex;
     justify-content: center;
   }
+}
+
+footer {
+  background-color: #c0392b;
+  text-align: center;
+  color: white;
+  padding: 1px;
+
+  .copyright {
+    @include fontDef(#601f13, 'Raleway', 11px, 600, 22px);
+  }
+
 }
 
 #scroll-down {
@@ -1055,11 +1191,6 @@ section {
   }
 }  
 
-footer {
-  background-color: #011926;
-  text-align: center;
-  color: white;
-}
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: $tabletBreakpoint) {
